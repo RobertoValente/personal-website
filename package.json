@@ -1,0 +1,22 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "tailwindcss build -i src/styles/tailwind.css -o src/styles/style.css --watch",
+    "dev-notusing": "concurrently \"npm run watch-css\" \"echo http://localhost:5500/src/pages/index.html\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@tailwindcss/typography": "^0.5.10",
+    "autoprefixer": "^10.4.19",
+    "concurrently": "^8.2.2",
+    "daisyui": "^4.8.0",
+    "postcss": "^8.4.38",
+    "tailwindcss": "^3.4.1"
+  }
+}
