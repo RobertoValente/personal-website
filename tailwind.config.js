@@ -3,6 +3,7 @@ module.exports = {
   mode: 'jit',
   content: [
     './src/pages/*.html',
+    './src/pages/*.js',
   ],
   theme: {
     screens: {

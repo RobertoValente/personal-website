@@ -4,20 +4,30 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "tailwindcss build src/styles/tailwind.css -o src/styles/style.css",
-    "dev": "tailwindcss build -i src/styles/tailwind.css -o src/styles/style.css --watch",
-    "dev-notusing": "concurrently \"npm run watch-css\" \"echo http://localhost:5500/src/pages/index.html\""
+    "start": "npm run dev",
+    "dev": "concurrently \"npm run watch-css\" \"nodemon src/scripts/start.js\"",
+    "tailwind:css": "postcss src/styles/tailwind.css -o src/styles/style.css",
+    "build-css": "tailwindcss build -i src/styles/tailwind.css -o src/styles/style.css",
+    "watch-css": "tailwindcss build -i src/styles/tailwind.css -o src/styles/style.css --watch"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "devDependencies": {
+  "dependencies": {
     "@tailwindcss/typography": "^0.5.10",
-    "autoprefixer": "^10.4.19",
     "concurrently": "^8.2.2",
+    "ejs": "^3.1.9",
+    "express": "^4.19.2",
+    "nodemon": "^3.1.0",
+    "path": "^0.12.7"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.19",
     "daisyui": "^4.8.0",
     "postcss": "^8.4.38",
     "tailwindcss": "^3.4.1"
+  },
+  "nodemonConfig": {
+    "ext": "html,js,json"
   }
 }
